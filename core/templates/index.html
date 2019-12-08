@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Hello World</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
+
 <h1> this works </h1>
 
-<form action="/" method="post">
+<form action="/" method="post" class="form-group">
 	{% csrf_token %}
 	{{form}}	
 
 <input type="submit" value ="Create"> 
 </form>
-</body>
-</html>
+
+
+{% endblock %}
